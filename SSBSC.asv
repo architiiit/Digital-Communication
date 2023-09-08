@@ -1,0 +1,26 @@
+clc;
+clear all;
+close all;
+%t=0:0.0001:5; %time(fs>>2fm)sampling theorem Ts<<1/fs
+Ac=input('Enter the amplitude of carrier signal :')
+fc=input('Enter the frequency of carrier signal :')
+Am=input('Enter the amplitude of message signal :')
+fm=input('Enter the frequency of message signal :')
+%ka=input('Enter the value of modulation sensitivity:')
+t=0:(1/(10*fc)):2;%time
+m_t=Am*cos(2*pi*fm*t);
+c_t=Ac*cos(2*pi*fc*t);
+s_t=;
+figure(1)
+plot(t,s_t)
+grid on
+xlabel('time(sec)')
+ylabel('Amplitude')
+title('MODULATED SIGNAL')
+
+figure(2)
+plot(t,c_t)
+grid on
+xlabel('time(sec)')
+ylabel('Amplitude')
+title('CARRIER SIGNAL')
